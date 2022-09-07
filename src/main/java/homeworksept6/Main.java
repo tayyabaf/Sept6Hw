@@ -58,38 +58,41 @@ public class Main {
 
     //Question 8
     public static String extractAllOddNumbers(int[] numbers) {
-        String[] myNumbers = new String[numbers.length];
-        int x;
-        for (x = 0; x < numbers.length ; x++) {
-            if(numbers[x]%2!=0){
-                System.out.println(numbers[x] + " ");
+        int number = 0;
+        int position = 0;
+        String oddNumbers = " ";
+        while (position < numbers.length) {
+            number = numbers[position];
+            position++;
+            if (number % 2 != 0) {
+                oddNumbers = oddNumbers + number + ", ";
             }
         }
-        myNumbers[x] = Integer.toString(numbers[x]);
-        return myNumbers[x];
+        return oddNumbers;
     }
-
 
     //Question 9
     public static String extractAllEvenNumbers(int[] numbers) {
-        String[] myNumberz = new String[numbers.length];
-        int i;
-        for (i = 0; i < numbers.length ; i++) {
-            if(numbers[i]%2==0){
-                System.out.println(numbers[i] + " ");
+        int number = 0;
+        int position = 0;
+        String evenNumbers = " ";
+        while (position < numbers.length) {
+            number = numbers[position];
+            position++;
+            if (number % 2 == 0) {
+                evenNumbers = evenNumbers + number + ", ";
             }
         }
-        myNumberz[i] = Integer.toString(numbers[i]);
-        return myNumberz[i];
+        return evenNumbers;
     }
 
 
-    //Question 10
-    /*public static boolean contains(String[] names, String element) {
-
-        return names[].contains("wow");
-    } */
-
+    /*Question 10
+    public static boolean contains(String[] names, String element) {
+    String element = "hey";
+        return names[].contains(element);
+    }
+*/
     public static void main(String[] args) {
         String []fruits = {"Apple", "Orange", "Banana", "Grapes", "Pineapple", "Mango", "Watermelon"};
         int []ints = {1,2,3,4,5,6};
@@ -104,6 +107,6 @@ public class Main {
             System.out.println("Answer to #7: " + getAverage(ints));
             System.out.println("Answer to #8: " + extractAllOddNumbers(numbers));
             System.out.println("Answer to #9: " + extractAllEvenNumbers(numbers));
-            //System.out.println("Answer to #10: " + getAverage(ints));
+          // System.out.println("Answer to #10: " + contains(names));
     }
 }
