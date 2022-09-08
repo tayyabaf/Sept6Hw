@@ -3,7 +3,6 @@ package homeworksept6;
 public class Main {
     //Question 1
     public static int getLastIndex(String[] fruits) {
-
         return fruits.length - 1;
     }
 
@@ -87,17 +86,49 @@ public class Main {
     }
 
 
-    /*Question 10
+    //Question 10
     public static boolean contains(String[] names, String element) {
-    String element = "hey";
-        return names[].contains(element);
+        for (String inputName : names) {
+            if (element == inputName) {
+                return true;
+            }
+        } return false;
     }
-*/
+
+    //Question 11
+    public static int getIndexByElement(String[] fruits, String element) {
+        int num = fruits.length;
+        int i = 0;
+        while (i < num) {
+            if (fruits[i] == element) {
+                return i;
+            } else {
+                i = i + 1;
+            }
+        }
+        return -111;
+    }
+
+
+    /* Question 12 NOT DONE!!
+    public static void printOddNumbersInRange(int start, int end){
+        int number = 0;
+        int position = 0;
+        String oddNums = " ";
+        for (start%2 == 0){
+            if (end%2 == 0){
+                number = (end-start)/+2 ;
+                start++;
+                return number;
+            }
+        }
+    }
+  */
+
     public static void main(String[] args) {
         String []fruits = {"Apple", "Orange", "Banana", "Grapes", "Pineapple", "Mango", "Watermelon"};
         int []ints = {1,2,3,4,5,6};
         int []numbers = {11, 14, 23, 29, 55, 66, 100,};
-        String []names = {"Bob", "Sue", "Jack", "May"};
             System.out.println("Answer to #1: " + getLastIndex(fruits));
             System.out.println("Answer to #2: " + getSecondToLastIndex(fruits));
             System.out.println("Answer to #3: " + getFirstElement(fruits));
@@ -107,6 +138,7 @@ public class Main {
             System.out.println("Answer to #7: " + getAverage(ints));
             System.out.println("Answer to #8: " + extractAllOddNumbers(numbers));
             System.out.println("Answer to #9: " + extractAllEvenNumbers(numbers));
-          // System.out.println("Answer to #10: " + contains(names));
+            System.out.println("Answer to #10: " + contains(fruits, "Apple"));
+            System.out.println("Answer to #11: " + getIndexByElement(fruits, "Orange"));
     }
 }
