@@ -140,5 +140,6 @@ public class Main {
             System.out.println("Answer to #9: " + extractAllEvenNumbers(numbers));
             System.out.println("Answer to #10: " + contains(fruits, "Apple"));
             System.out.println("Answer to #11: " + getIndexByElement(fruits, "Orange"));
+            //System.out.println(" Answer to #12: " + printOddNumbersInRange(3,9));
     }
 }
